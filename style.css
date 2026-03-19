@@ -1,0 +1,136 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg,rgb(246, 36, 36),rgb(224, 224, 32));
+    padding: 10px;
+}
+
+.todo-app{
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding:40px 30px 70px;
+    border-radius: 10px;
+}
+.todo-app h2{
+    color:#002765;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 16px;
+    margin-bottom: 20px;
+}
+.todo-app img{
+    width: 30px;
+    height: 20px;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(234, 232, 232);
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+
+}
+.row input{
+    flex:1;
+    border:none;
+    outline:none;
+    background: transparent;
+    padding: 10px;
+
+}
+.row button{
+    background-color: #ff5945;
+    border:none;
+    outline:none;
+    padding: 16px 50px;
+    border-radius: 40px;
+    color:#fff;
+    font-size: 16px;
+    cursor:pointer;
+}
+
+ul li{
+    list-style: none;
+    margin-top: 10px;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-image: url(images/empty.png);
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #333;
+    left: 8px;
+    top: 13px;
+}
+ul li.checked{
+    color:#555;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(images/checked.png);
+}
+ul li span{
+    position: absolute;
+    top: 5px;
+    right:0;
+    font-size: 22px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color:#555;
+    border-radius: 50%;
+}
+ul li span:hover{
+    background-color: rgb(198, 195, 195);
+    cursor: pointer;
+}
+
+.status-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.status-button .btn{
+    background-color: #ff5945;
+    color: white;
+    font-size: 12px;
+    padding: 10px 30px;
+    font-weight: 600;
+    border: none;
+    border-radius: 20px;
+    transition: background-color 0.5s ease;
+}
+.status-button .btn:hover{
+    background-color: #ea7e72;
+    cursor: pointer;
+
+}
+hr{
+    margin-top: 15px;
+    color:#828181;
+    opacity: 0.4;
+
+}
